@@ -36,8 +36,7 @@ a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
-    background: #00274C;
+    background: #FFFFFF;
     border: none;
     border-radius: 0;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -67,8 +66,8 @@ a:focus {
 }
 
 #sidebar {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 400px;
+    max-width: 400px;
     background: #00274C;
     color: #fff;
     transition: all 0.3s;
@@ -157,7 +156,6 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
 }
@@ -319,4 +317,13 @@ table.table td i {
 .ummaize{
     color: #ffffff;
     background: #FFCB05;
+    float: left;
 }
+
+.icofont{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+

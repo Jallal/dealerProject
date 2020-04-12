@@ -33,7 +33,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light text-white">
+<nav class="navbar navbar-expand-lg navbar-light text-dark">
     <div class="container-fluid">
         <a href="account" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
@@ -42,7 +42,7 @@
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
         </button>
-        <h1><img src="css/js/um.png" alt="Italian Trulli" height="150" width="150">UNIVERSITY OF MICHIGAN-DEARBORN</h1>
+        <h1><img src="css/js/car1.jpg" alt="Italian Trulli" height="150" width="150">AWESOME WOLVERINE DEALERSHIP</h1>
         <br/>
     </div>
 </nav>
