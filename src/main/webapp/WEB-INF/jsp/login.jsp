@@ -1,7 +1,4 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"><head><script src="https://connect.facebook.net/en_US/sdk.js?hash=6a08d399d1e4ac9ad786d5a558da3124&amp;ua=modern_es6" async="" crossorigin="anonymous"></script>
-
-
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="msvalidate.01" content="36A28D9109C077BA3E623651FC1656F4">
@@ -120,9 +117,9 @@
                     + data.username  +" AND "+ data.password+ "</pre>";
                 console.log("Success : ", json);
                 if(data.role==="admin"){
-                    $(location).attr('href', 'http://localhost:8080/index');
+                    $(location).attr('href', 'http://localhost:8080/admin');
                 }else {
-                    $(location).attr('href', 'http://localhost:8080/payment');
+                    $(location).attr('href', 'http://localhost:8080/user');
                 }},
             error: function (e) {
                 var json = "<h4>Ajax Response</h4><pre>"

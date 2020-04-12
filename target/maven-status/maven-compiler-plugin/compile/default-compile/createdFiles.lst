@@ -1,6 +1,8 @@
-com/example/springboot/AjaxResponseBody.class
-com/example/springboot/User.class
-com/example/springboot/HelloController.class
-com/example/springboot/PublisherInfo.class
-com/example/springboot/Application.class
-com/example/springboot/SearchCriteria.class
+umich/dearborn/cis/controller/DealerController.class
+umich/dearborn/cis/repository/UsersRepo.class
+umich/dearborn/cis/Application.class
+umich/dearborn/cis/entity/User.class
+umich/dearborn/cis/AjaxResponseBody.class
+umich/dearborn/cis/service/ServiceHandler.class
+umich/dearborn/cis/SearchCriteria.class
+umich/dearborn/cis/PublisherInfo.class
