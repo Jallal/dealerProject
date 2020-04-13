@@ -650,11 +650,16 @@
                         html += "<p><img class=\" img-fluid\" src=\"css/js/car1.jpg\" alt=\"card image\"></p>";
                         html += "<h4 class=\"card-title\">"+data[count].maker+" "+data[count].model+"</h4>";
                         html += "<p class=\"card-text\">Year : "+data[count].year+"</p>";
-                        html += "<p class=\"card-text\">millage : $"+data[count].millage+"</p>";
+                        html += "<p class=\"card-text\">millage : "+data[count].millage+"</p>";
                         html += "<p class=\"card-text\">Price : $"+data[count].price+"</p>";
                         html += "<a href=\"#\" class=\"btn btn-primary btn-sm\"><i class=\"fa fa-plus\"></i></a> </div> </div></div>";
-                        html += "<div class=\"backside\"><div class=\"card\"> <div class=\"card-body text-center mt-4\"> <h4 class=\"card-title\">Sunlimetech</h4>";
-                        html += "<p class=\"card-text\">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top</p>";
+                        html += "<div class=\"backside\"><div class=\"card\"> <div class=\"card-body text-center mt-4\"> <h4 class=\"card-title\">"+data[count].maker+" "+data[count].model+"</h4>";
+                        html += "<p class=\"card-text\">" +
+                            "<p class=\"card-text text-primary\">  Year         : "+data[count].year+"<p>" +
+                            "<p class=\"card-text  text-primary\">  Millage      : "+data[count].millage+"</p>" +
+                            "<p class=\"card-text  text-primary\">  Price        : $"+data[count].price+"<p>" +
+                            "<p class=\"card-text  text-primary\">  Color        : "+data[count].color+"</p>" +
+                            "<p class=\"card-text  text-primary\">  Status       : "+data[count].status+"</p></p>";
                         html += "<ul class=\"list-inline\">";
                         html += "<li class=\"list-inline-item\">";
                         html += "<a class=\"social-icon text-xs-center\" target=\"_blank\" href=\"#\">";
