@@ -27,20 +27,34 @@ public class DealerController {
         this.service = service;
 
     }
-    @RequestMapping("/admin")
+    @RequestMapping("/main")
     public String sudentAccount() throws IOException {
-        return "account";
+        return "main";
     }
 
-    @RequestMapping("/main")
+    @RequestMapping("/admin")
     public String sudentAccountPayment() throws IOException {
 
-        return "main";
+        return "admin";
     }
 
     @RequestMapping("/login")
     public String login() throws IOException {
         return "login";
+    }
+
+
+
+    @PostMapping("/api/add")
+    public ResponseEntity<?> addVehicle(@Valid @RequestBody User user, Errors errors) throws Exception {
+        List<User> usersList = this.service.getAllUsers();
+        AjaxResponseBody result = new AjaxResponseBody();
+        System.out.println("*******************************");
+        System.out.println("User data "+ user.toString());
+        System.out.println("User data from LIST"+ usersList.toString());
+        System.out.println("*******************************");
+        result.setMsg("success");
+        return ResponseEntity.ok(usersList);
     }
 
     @PostMapping("/api/search")
@@ -61,7 +75,7 @@ public class DealerController {
         System.out.println("User data "+ user.toString());
         System.out.println("User data from reposiroty"+ this.service.getUser(user.username));
         System.out.println("*******************************");
-        //user.setRole("admin");
+        user =this.service.getUser(user.username);
         AjaxResponseBody result = new AjaxResponseBody();
         result.setMsg("success");
         return ResponseEntity.ok(user);

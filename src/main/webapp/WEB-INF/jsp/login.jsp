@@ -1,77 +1,81 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"><head><script src="https://connect.facebook.net/en_US/sdk.js?hash=6a08d399d1e4ac9ad786d5a558da3124&amp;ua=modern_es6" async="" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+    <!--script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script-->
+    <!--have Ajx work -->
     <meta charset="utf-8">
-    <meta name="msvalidate.01" content="36A28D9109C077BA3E623651FC1656F4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="fb:admins" content="19908503">
-    <meta property="fb:app_id" content="112989545392380">
-    <meta property="og:title" content="HTML Snippets for Twitter Boostrap framework : Bootsnipp.com">
-    <meta property="og:type" content="website">
-    <meta property="twitter:account_id" content="786331568">
-    <meta itemprop="name" content="Bootsnipp">
-    <meta itemprop="description" content="Free HTML snippets for Bootstrap HTML CSS JS">
-    <meta property="og:url" content="https://bootsnipp.com">
-    <meta property="og:image" content="https://bootsnipp.com/img/logo.jpg">
-    <meta property="og:site_name" content="Bootsnipp.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta property="og:description" content="A design element gallery for web designers and web developers. Find snippets using HTML, CSS, Javascript, jQuery, and Bootstrap.">
-    <meta name="description" content="A design element gallery for web designers and web developers. Find snippets using HTML, CSS, Javascript, jQuery, and Bootstrap">
-    <title>Welcome back! Please sign in </title>
 
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.4&amp;appId=112989545392380"></script>
-    <script async="" src="//connect.facebook.net/en_US/fp.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <link rel="shortcut icon" href="//d2d3qesrx8xj6s.cloudfront.net/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="//d2d3qesrx8xj6s.cloudfront.net/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" href="//d2d3qesrx8xj6s.cloudfront.net/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="//d2d3qesrx8xj6s.cloudfront.net/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="//d2d3qesrx8xj6s.cloudfront.net/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="//d2d3qesrx8xj6s.cloudfront.net/apple-touch-icon-144x144-precomposed.png">
-    <link rel="alternate" type="application/rss+xml" title="Latest snippets from Bootsnipp.com" href="https://bootsnipp.com/feed.rss">
+    <!-- needed for the collapsable table -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <!-- Ajax end -->
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/dist/bootsnipp.min.css">
-    <style type="text/css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/styleIndex.css">
 
-        body{
-            background-image: url('dist/img/looping-bg.jpg');
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script-->
+
+    <!--have Ajx work -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!--script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+            else $('head > link').filter(':first').replaceWith(defaultCSS);
         }
-        .form-signin input[type="text"] {
-            margin-bottom: -1px;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        .form-signin input[type="password"] {
-            margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-        .form-signin .form-control {
-            position: relative;
-            font-size: 16px;
-            height: auto;
-            padding: 10px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-    </style>
+        $( document ).ready(function() {
+            var iframe_height = parseInt($('html').height());
+            window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script-->
+    <nav class="navbar navbar-expand-lg navbar-light text-dark">
+        <div class="container-fluid">
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <a href="account" type="button" id="d" class="btn">
+                <img src="css/js/car3.jpg" alt="Italian Trulli" height="100" width="150">
+            </a>
+            <a href="account" type="button" id="h" class="btn">
+            </a>
+            <div class="col-xs-1 center-block">
+                <h1>WOLVERINE DEALERSHIP</h1>
+            </div>
+            <br/>
+            <a href="account" type="button" id="Home" class="btn ummaize">
+                <i class="fas fa-align-left"></i>
+                <h6>HOME</h6>
+            </a>
+        </div>
+    </nav>
 <div class="container">
     <div class="row" style="margin-top:60px;">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 W-100">
+        </div>
+        <div class="col-md-5 W-100">
             <form>
                 <fieldset>
                     <h3 class="sign-up-title" style="color:dimgray; text-align: center">Welcome back! Please sign in</h3>
                     <hr class="colorgraph">
                     <input class="form-control email-title" placeholder="E-mail"  id="username" type="text">
                     <input class="form-control" placeholder="Password" id="password" type="password" value="">
-                    <a class="pull-right" href="http://localhost:8080/password">Forgot password?</a>
+                    <!--a class="pull-left" href="http://localhost:8080/password">Forgot password?</a-->
                     <div class="checkbox" style="width:140px;">
                         <label><input name="remember" type="checkbox" value="Remember Me"> Remember Me</label>
                     </div>
-                    <input class="page-link btn btn-lg btn-success btn-block" type="submit" value="Login">
+                    <input class="page-link btn btn-lg ummaize btn-block" type="submit" value="Login">
                     <br>
                     <p class="text-center"><a href="http/localhost:8080/register">Register for an account?</a></p>
                 </fieldset>
@@ -79,10 +83,6 @@
         </div>
     </div>
 </div>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="/dist/scripts.min.js"></script>
-<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script src="//www.danstools.com/js/forum.js"></script>
 <script>
 
     $(function() {
@@ -119,7 +119,7 @@
                 if(data.role==="admin"){
                     $(location).attr('href', 'http://localhost:8080/admin');
                 }else {
-                    $(location).attr('href', 'http://localhost:8080/user');
+                    $(location).attr('href', 'http://localhost:8080/main');
                 }},
             error: function (e) {
                 var json = "<h4>Ajax Response</h4><pre>"

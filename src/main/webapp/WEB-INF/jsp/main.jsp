@@ -154,7 +154,7 @@
     <link rel="stylesheet" href="css/styleIndex.css">
 
     <!-- Font Awesome JS -->
-    <!script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -186,16 +186,16 @@
     <div class="container-fluid">
         <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a href="account" type="button" id="d" class="btn">
+        <a href="main" type="button" id="d" class="btn">
             <img src="css/js/car3.jpg" alt="Italian Trulli" height="100" width="150">
         </a>
-        <a href="account" type="button" id="h" class="btn">
+        <a href="main" type="button" id="h" class="btn">
         </a>
         <div class="col-xs-1 center-block">
         <h1>WOLVERINE DEALERSHIP</h1>
         </div>
         <br/>
-        <a href="account" type="button" id="Home" class="btn ummaize">
+        <a href="login" type="button" id="Home" class="btn ummaize">
             <i class="fas fa-align-left"></i>
             <h6>Sign In</h6>
         </a>
@@ -707,7 +707,6 @@
         search["search"]="hello"
         this.fire_ajax_submit(search);
     }
-
 </script>
 
 
