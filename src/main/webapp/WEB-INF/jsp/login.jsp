@@ -45,16 +45,16 @@
         <div class="container-fluid">
             <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             </button>
-            <a href="account" type="button" id="d" class="btn">
+            <a href="main" type="button" id="d" class="btn">
                 <img src="css/js/car3.jpg" alt="Italian Trulli" height="100" width="150">
             </a>
-            <a href="account" type="button" id="h" class="btn">
+            <a href="main" type="button" id="h" class="btn">
             </a>
             <div class="col-xs-1 center-block">
                 <h1>WOLVERINE DEALERSHIP</h1>
             </div>
             <br/>
-            <a href="account" type="button" id="Home" class="btn ummaize">
+            <a href="main" type="button" id="Home" class="btn ummaize">
                 <i class="fas fa-align-left"></i>
                 <h6>HOME</h6>
             </a>

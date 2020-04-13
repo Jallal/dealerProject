@@ -93,54 +93,71 @@
 
 <td class="indtd">
     <div class="container">
-
-        <div class="row" style="margin-top:60px;margin-left:120px;">
+        <div class="row" style="margin-top:60px;margin-left:90px;">
             <div class="col-md-2 W-100">
             </div>
             <div class="col-md-10 W-100">
         <form class="form-horizontal" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <div id="feedback" class="bg-success text-center"></div>
-                <label for="name1" class="col-sm-2 control-label">Name:</label>
-                <div class="col-sm-4">
-                    <input type="email" class="form-control inputstl" id="name1" placeholder="Enter Your Full Name">
+                <label for="make" class="col-sm-5 control-label">MAKE:</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control inputstl" id="make" placeholder="Enter vehicle Maker">
                 </div>
             </div>
             <div class="form-group">
-                <label for="gender1" class="col-sm-2 control-label">Gender:</label>
-                <div class="col-sm-2">
-                    <select class="form-control inputstl" id="gender1">
-                        <option>Male</option>
-                        <option>Female</option>
+                <label for="model" class="col-sm-5 control-label">MODEL:</label>
+                <div class="col-sm-5">
+                    <select class="form-control inputstl" id="model">
+                        <option>GMC</option>
+                        <option>Chevrolet</option>
+                        <option>Buick</option>
+                        <option>cadillac</option>
                     </select>
 
                 </div>
             </div>
             <div class="form-group">
-                <label for="email1" class="col-sm-2 control-label">Email:</label>
+                <label for="status" class="col-sm-5 control-label">New OR Used:</label>
                 <div class="col-sm-5">
-                    <input type="email" class="form-control inputstl" id="email1" placeholder="Enter Email">
+                    <select class="form-control inputstl" id="status">
+                        <option>New</option>
+                        <option>Used</option>
+                    </select>
+
                 </div>
             </div>
             <div class="form-group">
-                <label for="password1" class="col-sm-2 control-label">Password:</label>
-                <div class="col-sm-4">
-                    <input type="password" class="form-control inputstl" id="password1" placeholder="Password here">
+                <label for="year" class="col-sm-5 control-label">YEAR:</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control inputstl" id="year" placeholder="Enter vehicle year">
                 </div>
             </div>
             <div class="form-group">
-                <label for="address1" class="col-sm-2 control-label">Address:</label>
+                <label for="odo" class="col-sm-5 control-label">Millage:</label>
                 <div class="col-sm-5">
-                    <input type="email" class="form-control inputstl" id="address1" placeholder="Full Address">
+                    <input type="password" class="form-control inputstl" id="odo" placeholder="Enter vehicle odometer reading">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price" class="col-sm-5 control-label">Price:</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control inputstl" id="price" placeholder="Enter vehicle price">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="color" class="col-sm-5 control-label">COLOR:</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control inputstl" id="color" placeholder="Select vehicle color">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="selphoto" class="col-sm-5 control-label">Select a File to upload:</label>
+                <label for="photo" class="col-sm-5 control-label">Select a File to upload:</label>
                 <div class="col-sm-12">
-                    <input type="file" class="inputstl" id="selphoto" name="sentfile" tabindex="-1" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);">
+                    <input type="file" class="inputstl" id="photo" name="sentfile" tabindex="-1" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);">
                     <div class="bootstrap-filestyle input-group">
-                    <label for="selphoto" class="btn btn-primary " >
+                    <label for="photo" class="btn btn-primary " >
                         <span class="icon-span-filestyle glyphicon glyphicon-upload" ></span>
                     <span  class="buttonText"> Upload an Image</span>
                 </label>
@@ -184,26 +201,41 @@
     $(function() {
         $(".getInfo").on("click", function(evt) {
 
-            var user = {};
+            var vehicle = {};
             evt.preventDefault();
-            var username = document.getElementById('name1').value;
-            var password = document.getElementById('gender1').value;
+            var make = document.getElementById('make').value;
+            var model = document.getElementById('model').value;
+            var price = document.getElementById('price').value;
+            var year = document.getElementById('year').value;
+            var image = document.getElementById('photo').value;
+            var millage = document.getElementById('odo').value;
+            var color = document.getElementById('color').value;
+            var status = document.getElementById('status').value;
+
+
             console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            console.log(username);
-            console.log(password);
+            console.log(make);
+            console.log(model);
             console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            user["username"] = username;
-            user["password"] = password;
-            submitLoginInfo(user);
+
+            vehicle["price"] = price;
+            vehicle["status"] = status;
+            vehicle["year"] = year;
+            vehicle["maker"] = make;
+            vehicle["color"] = color;
+            vehicle["model"] = model;
+            vehicle["millage"] = millage;
+            vehicle["image"] = image;
+            submitLoginInfo(vehicle);
         });
     });
 
-    function submitLoginInfo(user) {
+    function submitLoginInfo(vehicle) {
         jQuery.ajax({
             type: "POST",
             contentType: "application/json",
             url: "/api/add",
-            data: JSON.stringify(user),
+            data: JSON.stringify(vehicle),
             dataType: 'json',
             cache: false,
             timeout: 600000,
@@ -214,10 +246,9 @@
                 console.log("Success : ", json);
                 },
             error: function (e) {
-                var json = "<h4>Ajax Response</h4><pre>"
-                    + e.responseText + "</pre>";
+                var json = "<h4>An error occured</h4>" +
+                    "<pre>"+e.responseText+"</pre>";
                 $("#feedback").html(json);
-
                 console.log("ERROR : ", e);
 
             }

@@ -2,29 +2,30 @@ package umich.dearborn.cis.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import umich.dearborn.cis.AjaxResponseBody;
-import umich.dearborn.cis.PublisherInfo;
-import umich.dearborn.cis.entity.User;
-import umich.dearborn.cis.repository.UsersRepo;
-import umich.dearborn.cis.service.ServiceHandler;
+import umich.dearborn.cis.entity.UserEntity;
+import umich.dearborn.cis.model.User;
+import umich.dearborn.cis.model.Vehicle;
+import umich.dearborn.cis.service.UserHandler;
+import umich.dearborn.cis.service.VehicleHandler;
 
 import javax.validation.Valid;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class DealerController {
 
-    private ServiceHandler service;
+    private UserHandler service;
+    private VehicleHandler vehicleHandler;
 
-    public DealerController(ServiceHandler service){
+    public DealerController(UserHandler service,VehicleHandler vehicleHandler){
         this.service = service;
+        this.vehicleHandler=vehicleHandler;
 
     }
     @RequestMapping("/main")
@@ -34,7 +35,6 @@ public class DealerController {
 
     @RequestMapping("/admin")
     public String sudentAccountPayment() throws IOException {
-
         return "admin";
     }
 
@@ -46,27 +46,25 @@ public class DealerController {
 
 
     @PostMapping("/api/add")
-    public ResponseEntity<?> addVehicle(@Valid @RequestBody User user, Errors errors) throws Exception {
-        List<User> usersList = this.service.getAllUsers();
+    public ResponseEntity<?> addVehicle(@Valid @RequestBody Vehicle vehicle, Errors errors) throws Exception {
         AjaxResponseBody result = new AjaxResponseBody();
         System.out.println("*******************************");
-        System.out.println("User data "+ user.toString());
-        System.out.println("User data from LIST"+ usersList.toString());
+        System.out.println("Vehicle data "+ vehicle.toString());
         System.out.println("*******************************");
+        this.vehicleHandler.addVehicleToInventory(vehicle);
         result.setMsg("success");
-        return ResponseEntity.ok(usersList);
+        return ResponseEntity.ok(vehicle);
     }
 
     @PostMapping("/api/search")
     public ResponseEntity<?> getSearchResultViaAjax(@Valid @RequestBody User user, Errors errors) throws Exception {
-        List<User> usersList = this.service.getAllUsers();
+        List<Vehicle> vehicles = this.vehicleHandler.getAllInventory();
         AjaxResponseBody result = new AjaxResponseBody();
         System.out.println("*******************************");
-        System.out.println("User data "+ user.toString());
-        System.out.println("User data from LIST"+ usersList.toString());
+        System.out.println("Vehicle data "+ this.vehicleHandler.getAllInventory().toString());
         System.out.println("*******************************");
         result.setMsg("success");
-        return ResponseEntity.ok(usersList);
+        return ResponseEntity.ok(vehicles);
     }
 
     @PostMapping("/login/info")
@@ -75,7 +73,8 @@ public class DealerController {
         System.out.println("User data "+ user.toString());
         System.out.println("User data from reposiroty"+ this.service.getUser(user.username));
         System.out.println("*******************************");
-        user =this.service.getUser(user.username);
+        UserEntity entity = this.service.getUser(user.username);
+        user.setRole(entity.getRole());
         AjaxResponseBody result = new AjaxResponseBody();
         result.setMsg("success");
         return ResponseEntity.ok(user);

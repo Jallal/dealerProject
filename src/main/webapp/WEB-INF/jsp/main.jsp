@@ -156,28 +156,12 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script-->
-
     <!--have Ajx work -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <!--script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
-            else $('head > link').filter(':first').replaceWith(defaultCSS);
-        }
-        $( document ).ready(function() {
-            var iframe_height = parseInt($('html').height());
-            window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
-        });
-    </script-->
 </head>
 <body>
 <!-- Sidebar  -->
@@ -664,8 +648,10 @@
                         html += "<div class=\"mainflip\">";
                         html += "<div class=\"frontside\"><div class=\"card\"><div class=\"card-body text-center\">";
                         html += "<p><img class=\" img-fluid\" src=\"css/js/car1.jpg\" alt=\"card image\"></p>";
-                        html += "<h4 class=\"card-title\">Sunlimetech</h4>";
-                        html += "<p class=\"card-text\">ASTA LAVISTA BABY</p>";
+                        html += "<h4 class=\"card-title\">"+data[count].maker+" "+data[count].model+"</h4>";
+                        html += "<p class=\"card-text\">Year : "+data[count].year+"</p>";
+                        html += "<p class=\"card-text\">millage : $"+data[count].millage+"</p>";
+                        html += "<p class=\"card-text\">Price : $"+data[count].price+"</p>";
                         html += "<a href=\"#\" class=\"btn btn-primary btn-sm\"><i class=\"fa fa-plus\"></i></a> </div> </div></div>";
                         html += "<div class=\"backside\"><div class=\"card\"> <div class=\"card-body text-center mt-4\"> <h4 class=\"card-title\">Sunlimetech</h4>";
                         html += "<p class=\"card-text\">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top</p>";

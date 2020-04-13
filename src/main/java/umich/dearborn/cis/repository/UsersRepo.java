@@ -1,11 +1,9 @@
 package umich.dearborn.cis.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import umich.dearborn.cis.entity.User;
+import umich.dearborn.cis.entity.UserEntity;
 
-import java.util.List;
+public interface UsersRepo extends CrudRepository<UserEntity, Long> {
 
-public interface UsersRepo extends CrudRepository<User, Long> {
-
-    User findByUsername(String lastName);
+    UserEntity findByUsername(String lastName);
 }
