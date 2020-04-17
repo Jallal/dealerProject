@@ -158,6 +158,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <!--have Ajx work -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
@@ -615,6 +619,149 @@
 </div>
 </div>
 </body>
+<!-- START OF THE pop up pages-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Bootstrap form with input file and PHP upload script</title>
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="style-2.css">
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"-->
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+<style>
+    .inputstl {
+        padding: 10px;
+        border: solid 1px #173955;
+        outline: 0;
+        background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #AACCE8), to(#FFFFFF));
+        background: -moz-linear-gradient(top, #FFFFFF, #AACCE8 1px, #FFFFFF 25px);
+        box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+        -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+        -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+    }
+    .modal-content-2 {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 180%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        outline: 0;
+    }
+
+</style>
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content-2">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Enter vehicle Information </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+<td class="indtd" >
+    <div class="container">
+        <div class="row" style="margin-top:60px;margin-left:90px;">
+            <div class="col-md-2 W-100">
+            </div>
+            <div class="col-md-10 W-100">
+                <form class="form-horizontal" role="form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div id="feedback" class="bg-success text-center"></div>
+                        <label for="make" class="col-sm-5 control-label">MAKE:</label>
+                        <div class="col-sm-5">
+                            <input type="email" class="form-control inputstl" id="make" placeholder="Enter vehicle Maker">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="model" class="col-sm-5 control-label">MODEL:</label>
+                        <div class="col-sm-5">
+                            <select class="form-control inputstl" id="model">
+                                <option>GMC</option>
+                                <option>Chevrolet</option>
+                                <option>Buick</option>
+                                <option>cadillac</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="col-sm-5 control-label">New OR Used:</label>
+                        <div class="col-sm-5">
+                            <select class="form-control inputstl" id="status">
+                                <option>New</option>
+                                <option>Used</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="year" class="col-sm-5 control-label">YEAR:</label>
+                        <div class="col-sm-5">
+                            <input type="email" class="form-control inputstl" id="year" placeholder="Enter vehicle year">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="odo" class="col-sm-5 control-label">Millage:</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control inputstl" id="odo" placeholder="Enter vehicle odometer reading">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="price" class="col-sm-5 control-label">Price:</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control inputstl" id="price" placeholder="Enter vehicle price">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="color" class="col-sm-5 control-label">COLOR:</label>
+                        <div class="col-sm-5">
+                            <input type="email" class="form-control inputstl" id="color" placeholder="Select vehicle color">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo" class="col-sm-5 control-label">Select a File to upload:</label>
+                        <div class="col-sm-12">
+                            <input type="file" class="inputstl" id="photo" name="sentfile" tabindex="-1" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);">
+                            <div class="bootstrap-filestyle input-group">
+                                <label for="photo" class="btn btn-primary " >
+                                    <span class="icon-span-filestyle glyphicon glyphicon-upload" ></span>
+                                    <span  class="buttonText"> Upload an Image</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <button type="submit" class="btn btn-lg btn-block getInfo btn-primary">Submit Vehicle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</td>
+            </div>
+
+            <!-- footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary">Yes</button>
+            </div>
+            <!-- end of footer-->
+</div>
+    </div>
+</div>
+<!-- END OF THE POP UPS pages -->
 
 <script>
     $(document).ready(function () {
@@ -640,12 +787,17 @@
             timeout: 600000,
             success: function (data) {
                 var html = '';
+
+
+
                 if (data.length > 0) {
                     for (var count = 0; count < data.length; count++) {
                         console.log("^^^^^^^^^^^^^^^^^^IM IN BABAY^^^^^^^^^^^^");
                         html += "<div class=\"col-xs-12 col-sm-6 col-md-4\">";
                         html += "<div class=\"image-flip\" ontouchstart=\"this.classList.toggle('hover');\">";
+                        html += "<a type=\"button\" class=\"btn btn-info\" type=\"submit\" data-toggle=\"modal\" data-target=\"#basicModal\"><span class=\"popoverNumber\"><h5>Edit</h5><span></a>";
                         html += "<div class=\"mainflip\">";
+                        html +="</p>";
                         html += "<div class=\"frontside\"><div class=\"card\"><div class=\"card-body text-center\">";
                         html += "<p><img class=\" img-fluid\" src=\"css/js/car1.jpg\" alt=\"card image\"></p>";
                         html += "<h4 class=\"card-title\">"+data[count].maker+" "+data[count].model+"</h4>";
@@ -698,6 +850,11 @@
         search["search"]="hello"
         this.fire_ajax_submit(search);
     }
+
+    $('#basicModal').on('shown.bs.modal', function (e) {
+        //alert('Modal is successfully shown!');
+    });
+
 </script>
 
 
