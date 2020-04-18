@@ -12,6 +12,7 @@ public class Vehicle {
     public String model;
     public String millage;
     public String image;
+    public int id;
 
     public Vehicle() {
 
@@ -26,6 +27,7 @@ public class Vehicle {
         this.price = entity.getPrice();
         this.year = entity.getYear();
         this.status = entity.getStatus();
+        this.id=entity.getId();
     }
 
 
@@ -95,6 +97,8 @@ public class Vehicle {
                 ", color='" + color + '\'' +
                 ", model='" + model + '\'' +
                 ", millage='" + millage + '\'' +
+                ", image='" + image + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

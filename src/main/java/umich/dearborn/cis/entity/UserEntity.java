@@ -6,7 +6,6 @@ import javax.validation.constraints.NotNull;
 
 @Entity(name="USERS")
 public class UserEntity {
-
     @NotNull
     @Column(unique = true)
     @Id
@@ -38,6 +37,9 @@ public class UserEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public int getId() {
+        return id;
     }
 
     @Override

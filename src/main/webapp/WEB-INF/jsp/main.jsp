@@ -192,131 +192,102 @@
 <div class="wrapper">
 <nav id="sidebar">
     <div class="sidebar-header">
-        <h3>Registration Filters</h3>
+        <h3>Search Filters</h3>
     </div>
     <ul class="list-unstyled components">
         <!--p>Dummy Heading</p-->
         <li>
-            <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Search by degree</a>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Vehicle condition</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <select id="condition" class="homeSubmenu2 form-control">
+                    <option>New</option>
+                    <option>Used</option>
+                </select>
+            </ul>
+        </li>
+        <li>
+            <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Price</a>
             <ul class="collapse list-unstyled" id="homeSubmenu4">
                 <li>
-                    <a href="Information Sys Engineering" class="homeSubmenu0" >Information Sys Engineering</a>
-                </li>
-                <li>
-                    <a href="Indust & Manufac Sys Engin" class="homeSubmenu0" >Indust & Manufac Sys Engin</a>
-                </li>
-                <li>
-                    <a href="Business Administration"  class="homeSubmenu0" >Business Administration</a>
-                </li>
-                <li>
-                    <a href="Accounting"  class="homeSubmenu0" >Accounting</a>
-                </li>
-                <li>
-                    <a href="Chemistry"  class="homeSubmenu0" >Chemistry</a>
+                    <div class="form-group">
+                        <br>
+                        <input type="text" class="homeSubmenu1" id="minPrice" placeholder="Min">
+                        <input type="text" class="homeSubmenu1" id="maxPrice" placeholder="Max">
+
+                    </div>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Term</a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                    <a href="summer 2020" class="homeSubmenu0" >Summer 2020</a>
-                </li>
-                <li>
-                    <a href="winter 2020" class="homeSubmenu0" >Winter 2020</a>
-                </li>
-                <li>
-                    <a href="fall 2020"  class="homeSubmenu0" >Fall 2020</a>
-                </li>
-                <li>
-                    <a href="summer 2019"  class="homeSubmenu0" >Summer 2019</a>
-                </li>
-                <li>
-                    <a href="winter 2019"  class="homeSubmenu0" >Winter 2019</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Class Subject</a>
+            <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Year</a>
             <ul class="collapse list-unstyled" id="pageSubmenu1">
                 <li>
-                    <a href="Recommendation" class="homeSubmenu0" >Human-Centered Design&Eng</a>
-                </li>
-                <li>
-                    <a href="Detection" class="homeSubmenu0" >Humanities</a>
-                </li>
-                <li>
-                    <a href="Testing"  class="homeSubmenu0" >Indus&Manifa Sys Eng</a>
-                </li>
-                <li>
-                    <a href="Automation"  class="homeSubmenu0" >Information Sys Eng</a>
-                </li>
-                <li>
-                    <a href="Prioritization"  class="homeSubmenu0" >Information Sys Mgr</a>
+                <div class="form-group">
+                    <br>
+                    <input type="text" class="homeSubmenu3" id="minYear" placeholder="Min">
+                    <input type="text" class="homeSubmenu3" id="maxYear" placeholder="Max">
+                </div>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Instructor</a>
+            <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Make</a>
             <ul class="collapse list-unstyled" id="pageSubmenu3">
-                <li>
-                    <a href="External Quality" class="homeSubmenu0" >Sang-Hwan, Kim</a>
-                </li>
-                <li>
-                    <a href="Internal Quality" class="homeSubmenu0" >Zhiwei, Xu</a>
-                </li>
-                <li>
-                    <a href="Performance/Parallelism"  class="homeSubmenu0" >Heezy, Does it</a>
-                </li>
-                <li>
-                    <a href="Migration"  class="homeSubmenu0" >Paul, Richardson</a>
-                </li>
-                <li>
-                    <a href="Security"  class="homeSubmenu0" >Armen, Zakarian</a>
-                </li>
+                <select id="make" class="pageSubmenu3 form-control">
+                    <option>BUICK</option>
+                    <option>GMC</option>
+                    <option>Cadillac</option>
+                    <option>Chevrolet</option>
+                </select>
             </ul>
         </li>
         <li>
-            <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Meeting Day</a>
+            <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Color</a>
             <ul class="collapse list-unstyled" id="pageSubmenu4">
-                <li>
-                    <a href="Industrial" class="homeSubmenu0" >Monday</a>
-                </li>
-                <li>
-                    <a href="Open Source" class="homeSubmenu0" >Tuesday</a>
-                </li>
-                <li>
-                    <a href="Industrial" class="homeSubmenu0" >Wednesday</a>
-                </li>
-                <li>
-                    <a href="Open Source" class="homeSubmenu0" >Thursday</a>
-                </li>
-                <li>
-                    <a href="Industrial" class="homeSubmenu0" >Friday</a>
-                </li>
-                <li>
-                    <a href="Open Source" class="homeSubmenu0" >Web/Online</a>
-                </li>
+                <select id="color" class="pageSubmenu3 form-control">
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                </select>
             </ul>
         </li>
-
         <li>
-            <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Advanced</a>
+            <a href="#pageSubmenu5"  id="pageSubmenu51"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Model</a>
+
             <ul class="collapse list-unstyled" id="pageSubmenu5">
+
+                <select id="model" class="pageSubmenu3 form-control">
+                    <option>Sedan</option>
+                    <option>SUV</option>
+                    <option>Coupe</option>
+                    <option>Convertible</option>
+                </select>
+            </ul>
+        </li>
+        <li>
+            <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mileage</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu6">
                 <li>
-                    <a href="Data mining" class="homeSubmenu0" >Open Sections</a>
-                </li>
-                <li>
-                    <a href="Search base<" class="homeSubmenu0" >No Prerequisites</a>
-                </li>
-                <li>
-                    <a href="Formal methods" class="homeSubmenu0" >Web Only</a>
-                </li>
-                <li>
-                    <a href="Fuzzy logic" class="homeSubmenu0" >Evening Only</a>
+                    <div class="form-group">
+                        <br>
+                        <input type="text" class="homeSubmenu6" id="minMilleage" placeholder="Min">
+                        <input type="text" class="homeSubmenu6" id="maxMilleage" placeholder="Max">
+                    </div>
                 </li>
             </ul>
         </li>
+        <a href="#" type="button"  class="search btn btn-lg btn-block ummaize">Search</a>
+    </ul>
+    <ul class="list-unstyled components">
+    <li>
+        <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Load new vehicle</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu7">
+            <li>
+                <a type="button"  class="homeSubmenu7" class="btn btn-info" type="submit" data-toggle="modal" id="100" data-target="#basicModal">New Vehicle</a>
+            </li>
+        </ul>
+    </li>
     </ul>
 </nav>
     <div id="content">
@@ -624,7 +595,6 @@
 <title>A Bootstrap form with input file and PHP upload script</title>
 <meta name="robots" content="noindex,follow">
 <link rel="stylesheet" href="style-2.css">
-<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"-->
 <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
@@ -673,13 +643,22 @@
             </div>
             <div class="col-md-10 W-100">
                 <form class="form-horizontal" role="form" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <div class="mylable"><label for="model" class="col-sm-5 control-label">Vehicle Id:</label></div>
+                        <div class="col-sm-5 keywords">
+                            <input type="text" class="form-control inputstl" id="id" placeholder="44">
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <div id="feedback" class="bg-success text-center"></div>
                         <label for="make" class="col-sm-5 control-label">MAKE:</label>
                         <div class="col-sm-5">
-                            <input type="email" class="form-control inputstl" id="make" placeholder="Enter vehicle Maker">
+                            <input type="text" class="form-control inputstl" id="make" placeholder="Enter vehicle Maker">
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label for="model" class="col-sm-5 control-label">MODEL:</label>
                         <div class="col-sm-5">
@@ -699,31 +678,30 @@
                                 <option>New</option>
                                 <option>Used</option>
                             </select>
-
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="year" class="col-sm-5 control-label">YEAR:</label>
                         <div class="col-sm-5">
-                            <input type="email" class="form-control inputstl" id="year" placeholder="Enter vehicle year">
+                            <input type="text" class="form-control inputstl" id="year" placeholder="Enter vehicle year">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="odo" class="col-sm-5 control-label">Millage:</label>
                         <div class="col-sm-5">
-                            <input type="password" class="form-control inputstl" id="odo" placeholder="Enter vehicle odometer reading">
+                            <input type="text" class="form-control inputstl" id="odo" placeholder="Enter vehicle odometer reading">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="price" class="col-sm-5 control-label">Price:</label>
                         <div class="col-sm-5">
-                            <input type="password" class="form-control inputstl" id="price" placeholder="Enter vehicle price">
+                            <input type="text" class="form-control inputstl" id="price" placeholder="Enter vehicle price">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="color" class="col-sm-5 control-label">COLOR:</label>
                         <div class="col-sm-5">
-                            <input type="email" class="form-control inputstl" id="color" placeholder="Select vehicle color">
+                            <input type="text" class="form-control inputstl" id="color" placeholder="Select vehicle color">
                         </div>
                     </div>
 
@@ -741,9 +719,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-4">
-                            <button type="submit" class="btn btn-lg btn-block getInfo btn-primary">Submit Vehicle</button>
-                        </div>
                     </div>
                 </form>
             </div>
@@ -754,8 +729,9 @@
 
             <!-- footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-primary">Yes</button>
+                <h5 class="col-sm-offset-2 col-sm-4">Submit changes</h5>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">No</button>
+                <button type="button" class="btn getInfo btn-primary" data-dismiss="modal" aria-label="Close">Yes</button>
             </div>
             <!-- end of footer-->
 </div>
@@ -764,10 +740,34 @@
 <!-- END OF THE POP UPS pages -->
 
 <script>
+    $(function() {
+        $(".search").on("click", function(evt) {
+            console.log("*****************ASTA LAVISTA BABAY*********************");
+            var condition =$('#condition option:selected').val();
+            var color =$('#color option:selected').val();
+            var make =$('#make option:selected').val();
+            var model =$('#model option:selected').val();
+            var minMilleage = document.getElementById('minMilleage').value;
+            var maxMilleage = document.getElementById('maxMilleage').value;
+            var minPrice = document.getElementById('minPrice').value;
+            var maxPrice = document.getElementById('maxPrice').value;
+            var minYear = document.getElementById('minYear').value;
+            var maxYear = document.getElementById('maxYear').value;
+            var search = {};
+            search["condition"]=condition;
+            search["price"]=minPrice+";"+maxPrice;
+            search["year"]=minYear+";"+maxYear;
+            search["make"]=make;
+            search["color"]=color;
+            search["model"]=model;
+            search["mileage"]=minMilleage+";"+maxMilleage;;
+            fire_ajax_submit(search);
+        });
+    });
     $(document).ready(function () {
         console.log("********************************");
 
-        $("#search").submit(function (event) {
+        $(".search2").submit(function (event) {
             event.preventDefault();
             fire_ajax_submit();
         });
@@ -787,19 +787,17 @@
             timeout: 600000,
             success: function (data) {
                 var html = '';
-
-
-
+                var imgcount =1;
                 if (data.length > 0) {
                     for (var count = 0; count < data.length; count++) {
                         console.log("^^^^^^^^^^^^^^^^^^IM IN BABAY^^^^^^^^^^^^");
                         html += "<div class=\"col-xs-12 col-sm-6 col-md-4\">";
                         html += "<div class=\"image-flip\" ontouchstart=\"this.classList.toggle('hover');\">";
-                        html += "<a type=\"button\" class=\"btn btn-info\" type=\"submit\" data-toggle=\"modal\" data-target=\"#basicModal\"><span class=\"popoverNumber\"><h5>Edit</h5><span></a>";
+                        html += '<a type="button" class="btn popoverButton btn-info" type="submit" data-toggle="modal" id="+'+data[count].id+'" data-target="#basicModal"><span class="popoverNumber"><h5>Edit</h5><span></a>';
                         html += "<div class=\"mainflip\">";
                         html +="</p>";
                         html += "<div class=\"frontside\"><div class=\"card\"><div class=\"card-body text-center\">";
-                        html += "<p><img class=\" img-fluid\" src=\"css/js/car1.jpg\" alt=\"card image\"></p>";
+                        html += "<p><img class=\" img-fluid\" src=\"css/js/car"+imgcount+".jpg\" alt=\"card image\"></p>";
                         html += "<h4 class=\"card-title\">"+data[count].maker+" "+data[count].model+"</h4>";
                         html += "<p class=\"card-text\">Year : "+data[count].year+"</p>";
                         html += "<p class=\"card-text\">millage : "+data[count].millage+"</p>";
@@ -825,8 +823,11 @@
                         html += "<li class=\"list-inline-item\">";
                         html += "<a class=\"social-icon text-xs-center\" target=\"_blank\" href=\"#\">";
                         html += "<i class=\"fa fa-google\"></i> </a> </li> </ul> </div> </div> </div> </div> </div> </div>";
-                    }
-                } else {
+                        imgcount = imgcount+1;
+                        if(imgcount===7){
+                            imgcount=1;
+                        }
+                    }} else {
                     html = '<tr><td colspan="5">No Data Found</td></tr>';
                 }
                 $("#result").html(html);
@@ -836,27 +837,119 @@
                 var json = "<h4>Ajax Response</h4><pre>"
                     + e.responseText + "</pre>";
                 $('#feedback').html(json);
-
                 console.log("ERROR : ", e);
                 $("#btn-search").prop("disabled", false);
-
             }
         });
-
-    }
-    window.onload = function () {
-        var search = {};
-        search["category"]="hello"
-        search["search"]="hello"
-        this.fire_ajax_submit(search);
     }
 
-    $('#basicModal').on('shown.bs.modal', function (e) {
-        //alert('Modal is successfully shown!');
+    $(function() {
+        $(".homeSubmenu7").on("click", function(evt) {
+            evt.preventDefault();
+            $('div.keywords').empty();
+            $('div.mylable').empty();
+        });
     });
 
+
+
+    $(function() {
+        $(".homeSubmenu6").on("click", function(evt) {
+            evt.preventDefault();
+            $('div.keywords').empty();
+            $('div.mylable').empty();
+        });
+    });
+
+
+    $(document).on("click", '.popoverButton', function(event){
+
+        //alert('Modal is successfully shown! :');
+        event.preventDefault();
+        $('div.keywords').empty();
+        $('div.mylable').empty();
+         var id = $(this).attr("id");
+        $('div.mylable').append('<label for="model" class="col-sm-5 control-label">Vehicle Id:</label>');
+        $('div.keywords').append('<input type="text" class="form-control inputstl" id="id" placeholder="'+id+'" value="'+id+'">');
+
+    });
+
+
+    window.onload = function () {
+        var search = {};
+        search["category"]="hello";
+        search["search"]="hello";
+        fire_ajax_submit(search);
+    };
+
+
+
+    <!-- Submit for new/edit vehicles -->
+
+    $(function() {
+        $(".getInfo").on("click", function(evt) {
+
+            var vehicle = {};
+            var id=null;
+            evt.preventDefault();
+            if(document.getElementById('id')){
+                id = document.getElementById('id').value;
+            }
+            var id2=$(this).attr("id");
+            var id3 = $("#id").val();
+            console.log("*********** ID :"+id);
+            console.log("*********** ID :"+id2);
+            console.log("*********** ID :"+id3);
+            var make = document.getElementById('make').value;
+            var model = document.getElementById('model').value;
+            var price = document.getElementById('price').value;
+            var year = document.getElementById('year').value;
+            var image = document.getElementById('photo').value;
+            var millage = document.getElementById('odo').value;
+            var color = document.getElementById('color').value;
+            var status = document.getElementById('status').value;
+
+
+            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            console.log(make);
+            console.log(model);
+            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
+            vehicle["id"] = id;
+            vehicle["price"] = price;
+            vehicle["status"] = status;
+            vehicle["year"] = year;
+            vehicle["maker"] = make;
+            vehicle["color"] = color;
+            vehicle["model"] = model;
+            vehicle["millage"] = millage;
+            vehicle["image"] = image;
+            submitVehicle(vehicle);
+        });
+    });
+
+    function submitVehicle(vehicle) {
+        jQuery.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/api/add",
+            data: JSON.stringify(vehicle),
+            dataType: 'json',
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+                var json = "<h4>Vehicle was added successfully</h4>" +
+                    "<pre>Please proceed to add other vehicles</pre>";
+                $("#feedback").html(json);
+                console.log("Success : ", json);
+            },
+            error: function (e) {
+                var json = "<h4>An error occured</h4>" +
+                    "<pre>"+e.responseText+"</pre>";
+                $("#feedback").html(json);
+                console.log("ERROR : ", e);
+            }
+        });
+    }
 </script>
-
-
-
 </html>

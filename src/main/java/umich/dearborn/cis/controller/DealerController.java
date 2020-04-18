@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import umich.dearborn.cis.AjaxResponseBody;
+import umich.dearborn.cis.SearchCriteria;
 import umich.dearborn.cis.entity.UserEntity;
 import umich.dearborn.cis.model.User;
 import umich.dearborn.cis.model.Vehicle;
@@ -57,11 +58,11 @@ public class DealerController {
     }
 
     @PostMapping("/api/search")
-    public ResponseEntity<?> getSearchResultViaAjax(@Valid @RequestBody User user, Errors errors) throws Exception {
+    public ResponseEntity<?> getSearchResultViaAjax(@Valid @RequestBody SearchCriteria search, Errors errors) throws Exception {
         List<Vehicle> vehicles = this.vehicleHandler.getAllInventory();
         AjaxResponseBody result = new AjaxResponseBody();
         System.out.println("*******************************");
-        System.out.println("Vehicle data "+ this.vehicleHandler.getAllInventory().toString());
+        System.out.println("Search data "+search.toString());
         System.out.println("*******************************");
         result.setMsg("success");
         return ResponseEntity.ok(vehicles);

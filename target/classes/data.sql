@@ -39,5 +39,12 @@ INSERT INTO VEHICLES (maker, model, year,color, millage, status,price)VALUES
   ('GMC', 'SILVERADO', '2018','Blue','108000','New','18000'),
   ('BUICK', 'COLORADO', '2018','Blue','108000','New','18000'),
   ('CADILLAC', 'MICHIGAN', '2018','Blue','108000','New','18000'),
-  ('chevrolet', 'UTAH', '2018','Blue','108000','New','18000'),
+  ('chevrolet', 'IMPALA', '2018','Blue','108000','New','18000'),
+   ('chevrolet', 'CRUZE', '2018','Blue','108000','New','18000'),
+     ('GMC', 'YUKON', '2018','Blue','108000','New','18000'),
+   ('chevrolet', 'SILVERADO 1500', '2018','Blue','108000','New','18000'),
+    ('chevrolet', 'MALIBU', '2018','Blue','108000','New','18000'),
+     ('chevrolet', 'EQUINOX', '2018','Blue','108000','New','18000'),
+      ('chevrolet', 'CRUZE', '2018','Blue','108000','New','18000'),
+      ('BUICK', 'ENCLAVE', '2018','Blue','108000','New','18000'),
   ('GMC', 'TEXAS', '2018','Blue','108000','New','18000');

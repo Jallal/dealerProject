@@ -7,6 +7,7 @@ import umich.dearborn.cis.repository.VehicleRepo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VehicleHandler {
@@ -20,15 +21,24 @@ public class VehicleHandler {
 
     public void addVehicleToInventory(Vehicle vehicle) {
 
-        VehicleEntity entity = new VehicleEntity();
-        entity.setMaker(vehicle.getMaker());
-        entity.setModel(vehicle.getModel());
-        entity.setColor(vehicle.getColor());
-        entity.setMillage(vehicle.getMillage());
-        entity.setPrice(vehicle.getPrice());
-        entity.setYear(vehicle.getYear());
-        entity.setStatus(vehicle.getStatus());
-        this.vehicleRepo.save(entity);
+        System.out.println("*******************************");
+        System.out.println("Working with ID "+ vehicle.id);
+
+        Optional<VehicleEntity> entity= this.vehicleRepo.findById(vehicle.id);
+
+        if(!entity.isPresent()){
+             entity = Optional.of(new VehicleEntity());
+            System.out.println("I didn't fine the vehicle so creating a new one now ");
+        }
+        entity.get().setMaker(vehicle.getMaker());
+        entity.get().setModel(vehicle.getModel());
+        entity.get().setColor(vehicle.getColor());
+        entity.get().setMillage(vehicle.getMillage());
+        entity.get().setPrice(vehicle.getPrice());
+        entity.get().setYear(vehicle.getYear());
+        entity.get().setStatus(vehicle.getStatus());
+        this.vehicleRepo.save(entity.get());
+        System.out.println("*******************************");
 
     }
 
