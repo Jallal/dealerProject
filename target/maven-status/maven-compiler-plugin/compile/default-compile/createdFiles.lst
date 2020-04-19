@@ -1,7 +1,5 @@
 umich/dearborn/cis/controller/DealerController.class
 umich/dearborn/cis/entity/VehicleEntity.class
-umich/dearborn/cis/service/UserHandler.class
-umich/dearborn/cis/service/VehicleHandler.class
 umich/dearborn/cis/model/User.class
 umich/dearborn/cis/AjaxResponseBody.class
 umich/dearborn/cis/SearchCriteria.class
@@ -9,5 +7,7 @@ umich/dearborn/cis/repository/UsersRepo.class
 umich/dearborn/cis/entity/UserEntity.class
 umich/dearborn/cis/Application.class
 umich/dearborn/cis/repository/VehicleRepo.class
+umich/dearborn/cis/delegate/VehicleDelegate.class
 umich/dearborn/cis/model/Vehicle.class
 umich/dearborn/cis/PublisherInfo.class
+umich/dearborn/cis/delegate/UserDelegate.class

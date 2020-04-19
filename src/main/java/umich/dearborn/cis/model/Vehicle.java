@@ -1,7 +1,5 @@
 package umich.dearborn.cis.model;
 
-import umich.dearborn.cis.entity.VehicleEntity;
-
 public class Vehicle {
 
     public String price;
@@ -10,26 +8,23 @@ public class Vehicle {
     public String maker;
     public String color;
     public String model;
-    public String millage;
+    public String mileage;
     public String image;
     public int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
 
     public Vehicle() {
 
     }
-
-    public Vehicle(VehicleEntity entity) {
-
-        this.maker = entity.getMaker();
-        this.model = entity.getModel();
-        this.color = entity.getColor();
-        this.millage = entity.getMillage();
-        this.price = entity.getPrice();
-        this.year = entity.getYear();
-        this.status = entity.getStatus();
-        this.id=entity.getId();
-    }
-
 
     public String getPrice() {
         return price;
@@ -79,12 +74,12 @@ public class Vehicle {
         this.model = model;
     }
 
-    public String getMillage() {
-        return millage;
+    public String getMileage() {
+        return mileage;
     }
 
-    public void setMillage(String millage) {
-        this.millage = millage;
+    public void setMileage(String mileage) {
+        this.mileage = mileage;
     }
 
     @Override
@@ -96,7 +91,7 @@ public class Vehicle {
                 ", maker='" + maker + '\'' +
                 ", color='" + color + '\'' +
                 ", model='" + model + '\'' +
-                ", millage='" + millage + '\'' +
+                ", millage='" + mileage + '\'' +
                 ", image='" + image + '\'' +
                 ", id=" + id +
                 '}';

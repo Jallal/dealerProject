@@ -1,11 +1,11 @@
-/Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/service/VehicleHandler.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/AjaxResponseBody.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/repository/UsersRepo.java
-/Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/service/UserHandler.java
+/Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/delegate/UserDelegate.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/controller/DealerController.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/Application.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/model/Vehicle.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/repository/VehicleRepo.java
+/Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/delegate/VehicleDelegate.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/entity/UserEntity.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/entity/VehicleEntity.java
 /Users/jhazzatgmail.com/Documents/dealerProject/src/main/java/umich/dearborn/cis/model/User.java

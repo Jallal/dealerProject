@@ -48,3 +48,5 @@ INSERT INTO VEHICLES (maker, model, year,color, millage, status,price)VALUES
       ('chevrolet', 'CRUZE', '2018','Blue','108000','New','18000'),
       ('BUICK', 'ENCLAVE', '2018','Blue','108000','New','18000'),
   ('GMC', 'TEXAS', '2018','Blue','108000','New','18000');
+
+  commit ;
